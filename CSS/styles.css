@@ -212,7 +212,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -263,19 +263,22 @@ a {
   color: #fff;
 }
 
-.btn--streched {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
 .btn--block {
   width: 100%;
   display: inline-block;
 }
 
+@media screen and (min-width: 500px) {
+  .btn--streched {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
+    padding: 2rem 3rem;
   }
 }
 
@@ -303,6 +306,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -547,7 +551,7 @@ a {
 .callout__heading {
   color: #fff;
   margin-top: 0;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .callout .btn {
@@ -556,6 +560,7 @@ a {
 }
 
 .callout__content {
+  font-size: 2.4rem;
   text-align: center;
 }
 
@@ -565,6 +570,7 @@ a {
   }
 
   .callout__content {
+    font-size: 2rem;
     text-align: left;
   }
 
@@ -737,10 +743,11 @@ nav.collapsible--expanded .nav__toggler {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
   font-size: 2rem;
   font-weight: 600;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   justify-items: center;
   margin: 0 auto;
@@ -790,9 +797,20 @@ nav.collapsible--expanded .nav__toggler {
 /* Showcase Block */
 .block-showcase__image > img {
   width: 100%;
+  max-width: 700px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .block-showcase .grid {
+    grid-template-columns: 100%;
+  }
+
+  .block-showcase__image {
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 1400px) {
   .block-showcase .grid {
     grid-template-columns: 50% 50%;
   }
@@ -803,13 +821,16 @@ nav.collapsible--expanded .nav__toggler {
 
   .block-showcase__image > img {
     width: auto;
-    max-width: 700px;
   }
 }
 
 /* Footer */
 .footer {
   background: #232323;
+}
+
+.footer__sections {
+  margin-top: 6rem;
 }
 
 .footer a {
@@ -883,4 +904,10 @@ nav.collapsible--expanded .nav__toggler {
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+/* Callout Singup */
+.callout-singup {
+  transform: translateY(10rem);
+  margin: 0 2rem;
 }
