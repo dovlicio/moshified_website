@@ -4,5 +4,7 @@ Beautiful website, scaled for different screen sizes.
 
 
 Course created by Mosh Hamedani.
+
+If you want to preview the website go on: https://www.moshified.com/
                                   
 ![Screenshot from 2024-02-17 20-41-08](https://github.com/dovlicio/dovlicify/assets/77668352/4e6bfd7e-e415-49aa-a6ab-fedfcfc0970b)
